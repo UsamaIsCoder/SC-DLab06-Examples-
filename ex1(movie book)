@@ -1,0 +1,36 @@
+// Assuming you want to put it in the 'moviebooking' package
+package moviebooking;
+
+import java.util.concurrent.TimeUnit;
+
+public class MovieBookApp {
+    public static void main(String[] args) {
+        // Create an instance of the TotalEarnings class
+        TotalEarnings te = new TotalEarnings();
+        
+        // Start the calculation or process in the TotalEarnings class
+        te.start();
+        
+        try {
+            // Simulate waiting or processing time (example: wait for a few seconds)
+            System.out.println("Waiting for earnings to be calculated...");
+            TimeUnit.SECONDS.sleep(2);  // Wait for 2 seconds (just an example)
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        // Output the total earnings
+        System.out.println("Total earnings: " + te.total + " Rs");
+    }
+}
+
+class TotalEarnings {
+    // Assuming total earnings are calculated in some way
+    public int total = 1000; // Example, replace with actual logic
+
+    public void start() {
+        // Simulate the process of calculating earnings
+        // You can add your logic here
+        System.out.println("Calculating total earnings...");
+    }
+}
